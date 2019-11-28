@@ -107,7 +107,7 @@
                             <td>${i.mbDDR}</td>
                             <td>${i.mbNVMe}</td>
                             <td>${i.mbSize}</td>
-                            <td><input type="button" name="mbcheck" value="선택" onClick="selected('${i.mbName}')"></td>
+                            <td><input type="button" name="mbcheck" value="선택" onClick="pcheck('p1','${i.mbName}')"></td>
                         </tr>
                     </c:forEach>
 
