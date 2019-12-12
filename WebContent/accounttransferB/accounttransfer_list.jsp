@@ -15,7 +15,7 @@
 <head>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>계좌이체 조회</title>
+    <title>컴퓨터 부품 조회</title>
 
     <link rel="stylesheet" href="accounttransfer.css" type="text/css" media="screen" />
     <script type="text/javascript" src="accounttransfer_list.js"></script>
