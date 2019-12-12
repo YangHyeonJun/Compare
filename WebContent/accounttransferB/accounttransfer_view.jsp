@@ -19,10 +19,10 @@
 <body>
 
 <div align="center">
-	<H2>계좌이체 등록</H2>
+	<H2>컴퓨터 부품 등록</H2>
 	<HR>
 
-	<!-- 계좌이체 등록용 -->
+	<!-- 부품 등록용 -->
 	<form name="form1" method="post" action="AccountTransferController">
 	
 		<input type="hidden" name="id" value=${id}>
