@@ -3,6 +3,13 @@ window.onload = function() {
 
 	if (action == "mainboard_list") {
 		document.getElementById("mainboard").style.display = 'block';
+		
+		ajax({
+			type: "POST",
+			url: "accounttransferB/AccountTransferController",
+			data: data,
+			asyncd: false
+		});
 	} else if (action == "cpu_list") {
 		document.getElementById("cpu").style.display = 'block';
 	} else if (action == "ram_list") {
