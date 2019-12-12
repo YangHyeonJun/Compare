@@ -91,7 +91,7 @@ public class AccountTransferController extends HttpServlet {
 			/* action에 따라 동작 */
 			if (action.equals("mainboard_list")) {
 
-				// 계좌이체 조회결과
+				// 컴퓨터 부품 조회
 				ArrayList<AccountTransferDTO> accountTransferList = accountTransferDAO.getDBList("mainboard");
 
 				// List를 setAttribute
@@ -104,7 +104,7 @@ public class AccountTransferController extends HttpServlet {
 
 			} else if (action.equals("cpu_list")) {
 
-				// 계좌이체 조회결과
+				// 부품 조회결과
 				ArrayList<AccountTransferDTO> accountTransferList = accountTransferDAO.getDBList("cpu");
 
 				// List를 setAttribute
@@ -115,7 +115,7 @@ public class AccountTransferController extends HttpServlet {
 
 			} else if (action.equals("ram_list")) {
 
-				// 계좌이체 조회결과
+				// 부품 조회결과
 				ArrayList<AccountTransferDTO> accountTransferList = accountTransferDAO.getDBList("ram");
 
 				// List를 setAttribute
@@ -126,7 +126,7 @@ public class AccountTransferController extends HttpServlet {
 
 			} else if (action.equals("ssd_list")) {
 
-				// 계좌이체 조회결과
+				// 부품 조회결과
 				ArrayList<AccountTransferDTO> accountTransferList = accountTransferDAO.getDBList("ssd");
 
 				// List를 setAttribute
@@ -137,7 +137,7 @@ public class AccountTransferController extends HttpServlet {
 
 			} else if (action.equals("cases_list")) {
 
-				// 계좌이체 조회결과
+				// 부품 조회결과
 				ArrayList<AccountTransferDTO> accountTransferList = accountTransferDAO.getDBList("cases");
 
 				// List를 setAttribute
@@ -148,7 +148,7 @@ public class AccountTransferController extends HttpServlet {
 
 			} else if (action.equals("vga_list")) {
 
-				// 계좌이체 조회결과
+				// 부품 조회결과
 				ArrayList<AccountTransferDTO> accountTransferList = accountTransferDAO.getDBList("vga");
 
 				// List를 setAttribute
@@ -161,39 +161,39 @@ public class AccountTransferController extends HttpServlet {
 
 			else if (action.equals("add_mainboard")) {
 
-				// 계좌이체 입력화면 오픈
+				// 부품 입력화면 오픈
 				request.setAttribute("action", action);
 
 				pageContext.forward("accounttransfer_view.jsp");
 
 			} else if (action.equals("add_cpu")) {
 
-				// 계좌이체 입력화면 오픈
+				// 부품 입력화면 오픈
 				request.setAttribute("action", action);
 
 				pageContext.forward("accounttransfer_view.jsp");
 
 			} else if (action.equals("add_ram")) {
 
-				// 계좌이체 입력화면 오픈
+				// 부품 입력화면 오픈
 				request.setAttribute("action", action);
 
 				pageContext.forward("accounttransfer_view.jsp");
 			} else if (action.equals("add_ssd")) {
-				// 계좌이체 입력화면 오픈
+				// 부품 입력화면 오픈
 				request.setAttribute("action", action);
 
 				pageContext.forward("accounttransfer_view.jsp");
 			} else if (action.equals("add_cases")) {
 
-				// 계좌이체 입력화면 오픈
+				// 부품 입력화면 오픈
 				request.setAttribute("action", action);
 
 				pageContext.forward("accounttransfer_view.jsp");
 
 			} else if (action.equals("add_vga")) {
 
-				// 계좌이체 입력화면 오픈
+				// 부품 입력화면 오픈
 				request.setAttribute("action", action);
 
 				pageContext.forward("accounttransfer_view.jsp");
@@ -310,12 +310,12 @@ public class AccountTransferController extends HttpServlet {
 
 			} else if (action.equals("update")) {
 
-				// 계좌이체 수정
+				// 부품 수정
 
 				if (accountTransferDAO.updateDB(Integer.parseInt((String) request.getParameter("id")), part,
 						accountTransferDTO)) {
 
-					// 계좌이체 조회결과
+					// 부품 조회결과
 					ArrayList<AccountTransferDTO> accountTransferList = accountTransferDAO.getDBList(part);
 
 					// List를 setAttribute
@@ -329,10 +329,10 @@ public class AccountTransferController extends HttpServlet {
 
 			} else if (action.equals("delete")) {
 
-				// 계좌이체 삭제
+				// 부품 삭제
 				if (accountTransferDAO.deleteDB(Integer.parseInt((String) request.getParameter("id")), part)) {
 
-					// 계좌이체 조회결과
+					// 부품 조회결과
 					ArrayList<AccountTransferDTO> accountTransferList = accountTransferDAO.getDBList("mainboard");
 
 					// List를 setAttribute
