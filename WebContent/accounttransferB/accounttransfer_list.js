@@ -5,16 +5,6 @@ window.onload = function() {
 		document.getElementById("mainboard").style.display = 'block';
 	} else if (action == "cpu_list") {
 		document.getElementById("cpu").style.display = 'block';
-		
-
-		ajax({
-			url: "./accounttransfer_list.jsp",
-			type: "POST",
-			data: "cpu=" + cpu,
-			success: function(data) {
-				('#mainboard').val(data.mainborad);
-			}
-		})
 	} else if (action == "ram_list") {
 		document.getElementById("ram").style.display = 'block';
 	} else if (action == "ssd_list") {
