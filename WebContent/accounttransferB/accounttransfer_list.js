@@ -1,6 +1,6 @@
 window.onload = function() {
 	var action = document.form1.action.value;
-
+	
 	if (action == "mainboard_list") {
 		document.getElementById("mainboard").style.display = 'block';
 	} else if (action == "cpu_list") {

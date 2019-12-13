@@ -8,6 +8,9 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+
+import org.json.simple.JSONObject;
+
 import javax.servlet.annotation.WebServlet;
 
 // 자바 클래스 import
@@ -33,7 +36,21 @@ public class AccountTransferController extends HttpServlet {
 
 	// POST 요청을 처리하기 위한 메서드, doGet()에서도 호출하고 있기 때문에 모든 요청은 doPost()에서 처리되는 구조이다.
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		String val = request.getParameter("val");
+		String num = request.getParameter("num");
 
+		  System.out.println(val);
+		  System.out.println(num);
+
+		  // return type은 json으로
+		  JSONObject obj = new JSONObject();
+		  
+		  obj.put("result", "fail");
+
+		  response.setContentType("application/x-json; charset=UTF-8");
+		  response.getWriter().print(obj);
+		  
 		// pageContext 참조변수 선언
 		// javax.servlet.jsp.PageContext pageContext = null;
 		PageContext pageContext = null;
