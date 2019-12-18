@@ -1,19 +1,6 @@
 window.onload = function() {
 	var action = document.form1.action.value;
 
-	ajax({
-        type:"POST",
-        url:"/accounttransferB/accounttransfer_list.jsp",
-        contentType: "application/x-www-form-urlencoded; charset=utf-8",
-        data: str,
-        datatype:"json",
-        success: function(data) {
-          alert(data.result);			
-        },
-        error: function(e) {
-          alert("에러발생");
-        }			
-      });
     
 	if (action == "mainboard_list") {
 		document.getElementById("mainboard").style.display = 'block';
